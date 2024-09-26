@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+.top {
+  background: url(bg-desktop.svg);
+  background-color: var(--Violet);
+  padding: 50px 70px 0;
+  min-height: 100vh;
+  .grid {
+    padding: 50px 0 0;
+    display: flex;
+    gap: 60px;
+    flex-direction: row-reverse;
+    .description {
+      width: 550px;
+      h1 {
+        padding-bottom: 35px;
+        font-size: 45px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+      }
+      p {
+        padding-bottom: 30px;
+        line-height: 30px;
+        font-weight: 400;
+      }
+      button {
+        width: 40%;
+        padding: 20px;
+        border-radius: 50px;
+        border: none;
+        color: var(--Violet);
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: -1px 3px 9px 0px rgba(0, 0, 0, 0.719);
+        transition: 0.4s;
+      }
+      button:hover {
+        background-color: var(--SoftMagenta);
+        color: white;
+      }
+    }
+    .mockup {
+      width: 50%;
+      margin: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .logos {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    svg {
+      width: 60%;
+      fill: white;
+      transition: 0.4s;
+    }
+  }
+  .logo {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .logo:hover {
+    border: 2px solid var(--SoftMagenta);
+    svg {
+      fill: var(--SoftMagenta);
+    }
+  }
+}
+@media (max-width: 900px) {
+  .top {
+    padding: 30px;
+    .name {
+      img {
+        width: 50%;
+      }
+    }
+    .grid {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-top: 30px;
+      gap: 30px;
+      .description {
+        text-align: center;
+        width: 100%;
+        h1 {
+          font-size: 25px;
+          padding-bottom: 20px;
+        }
+        button {
+          width: 60%;
+        }
+      }
+      .mockup {
+        width: 90%;
+      }
+    }
+    .logos {
+      padding-top: 50px;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .top {
+    background: url(bg-mobile.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--Violet);
+    
+  }
+}
